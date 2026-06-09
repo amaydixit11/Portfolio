@@ -13,7 +13,7 @@ export default function Nav() {
     { href: "/blog", icon: FileText, label: "Blog" },
     { href: "/projects", icon: Briefcase, label: "Projects" },
     { href: "/resume", icon: BookOpen, label: "Resume" },
-    { href: "/pixels", icon: Box, label: "Life In Pixels" },
+    // { href: "/pixels", icon: Box, label: "Life In Pixels" },
   ];
 
   return (

@@ -15,19 +15,37 @@ interface TimelineItem {
 
 const experienceData: TimelineItem[] = [
   {
+    organization: "OpenSSF via Linux Foundation",
+    roles: [
+      {
+        title: "LFX Mentee",
+        period: "June, 2026 - August, 2026",
+        description:
+          "Selected for the Linux Foundation's LFX Mentorship Program through OpenSSF. Contributing to Repository Service for TUF (RSTUF), working on secure software supply-chain infrastructure, repository management, artifact signing workflows, and improvements to The Update Framework (TUF) ecosystem.",
+      },
+    ],
+    logoUrl: "https://www.pngkey.com/png/detail/237-2373304_linux-foundation-logo.png",
+  },
+  {
     organization: "MOSIP via C4GT",
     roles: [
       {
-        title: "Summer Intern, C4GT DMP'25",
-        period: "May, 2025 - August, 2025",
+        title: "Project Intern",
+        period: "October, 2025 - February, 2026",
         description:
-          "Worked on MOSIP Inji Stack, enabling Inji Certify to issue Verifiable Credentials (VCs) in the mDoc (ISO/IEC 18013-5) format. Implemented data element and namespace mapping, digest calculation, Mobile Security Object (MSO) construction, and CBOR encoding for compliance with the mso_mdoc profile. Integrated the mDoc issuance workflow with OpenID4VCI protocol.",
+          "Implemented OpenID4VCI Pre-Authorized Code Flow in MOSIP Inji Certify, enabling seamless issuance of Verifiable Credentials without real-time authentication. Developed credential offer generation, pre-authorized code validation, token exchange workflows, multiple authorization server support, metadata discovery, caching, and OID4VCI-compliant credential issuance APIs.",
       },
       {
-        title: "Project Intern, C4GT Sprint'2",
+        title: "Summer Intern, C4GT DMP'25",
+        period: "June, 2025 - September, 2025",
+        description:
+          "Worked on MOSIP Inji Stack, enabling Inji Certify to issue Verifiable Credentials (VCs) in the mDoc (ISO/IEC 18013-5) format. Implemented data element and namespace mapping, digest calculation, Mobile Security Object (MSO) construction, CBOR encoding, and OpenID4VCI integration for standards-compliant credential issuance.",
+      },
+      {
+        title: "Project Intern, C4GT Sprint'25",
         period: "March, 2025 - May, 2025",
         description:
-          "Worked on MOSIP Inji Stack, implementing a Revocation Mechanism for Verifiable Credentials (VCs). Compliant with W3C Verifiable Credentials Data Model 2.0 and BitString StatusList v1.0. Developed APIs for credential status updates, cryptographic proofs, and decentralized revocation.",
+          "Implemented a Revocation Mechanism for Verifiable Credentials compliant with W3C Verifiable Credentials Data Model 2.0 and BitString StatusList v1.0. Developed APIs for credential status updates, cryptographic proofs, and decentralized revocation workflows.",
       },
     ],
     logoUrl: "https://avatars.githubusercontent.com/u/39733477?s=280&v=4",
@@ -37,15 +55,15 @@ const experienceData: TimelineItem[] = [
     roles: [
       {
         title: "Coordinator",
-        period: "April, 2025 - Present",
+        period: "April, 2025 - April, 2026",
         description:
-          "Leading technical initiatives and fostering open-source culture within the institute. Orchestrating workshops, hackathons, and collaborative projects that bridge academic learning with real-world development.",
+          "Leading IIT Bhilai's open-source community by defining technical roadmaps, mentoring contributors, organizing workshops and hackathons, and driving collaborative software projects across the institute.",
       },
       {
         title: "Core Member",
         period: "April, 2024 - March, 2025",
         description:
-          "Active contributor to open-source projects and community building initiatives. Participated in organizing technical events and mentoring junior members.",
+          "Contributed to open-source projects, organized technical events, mentored junior members, and helped expand participation in the institute's developer ecosystem.",
       },
     ],
     logoUrl: "https://avatars.githubusercontent.com/u/61535687?s=280&v=4",
@@ -57,7 +75,7 @@ const experienceData: TimelineItem[] = [
         title: "FOSSEE Summer Fellow",
         period: "May, 2025 - July, 2025",
         description:
-          "Selected for fellowship focusing on open-source structural design software. Contributed to OSDAG's mission of democratizing engineering design tools through collaborative development.",
+          "Selected for the FOSSEE Summer Fellowship at IIT Bombay. Contributed to OSDAG, an open-source structural steel design platform, supporting the mission of democratizing engineering design tools through collaborative development.",
       },
     ],
     logoUrl: "https://avatars.githubusercontent.com/u/19796505?v=4",

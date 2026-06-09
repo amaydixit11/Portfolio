@@ -27,6 +27,8 @@ const highlights: Record<string, string> = {
   "C4GT": "text-[var(--color-secondary)] font-semibold",
   "Open Source": "text-[var(--color-secondary)] font-semibold",
   "IBITF": "text-[var(--color-secondary)] font-semibold",
+  "RSTUF": "text-[var(--color-secondary)] font-semibold",
+  "LFX": "text-[var(--color-secondary)] font-semibold",
 
   "Machine Learning": "text-[var(--color-purple)] font-semibold",
   "Deep Learning": "text-[var(--color-purple)] font-semibold",
@@ -42,6 +44,10 @@ const highlights: Record<string, string> = {
   "Learned Index": "text-[var(--color-purple)] font-semibold",
   "Adaptive Learned Index": "text-[var(--color-purple)] font-semibold",
   "MetaIndex": "text-[var(--color-purple)] font-semibold",
+  "RAGfolio": "text-[var(--color-purple)] font-semibold",
+  "GitIntel": "text-[var(--color-purple)] font-semibold",
+  "ACORDE": "text-[var(--color-purple)] font-semibold",
+  "Kudos": "text-[var(--color-purple)] font-semibold",
 
   "Operating Systems": "text-[var(--color-orange)] font-semibold",
   "DevOps": "text-[var(--color-orange)] font-semibold",

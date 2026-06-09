@@ -20,18 +20,26 @@ interface TimelineEvent {
 
 const timelineData: TimelineEvent[] = [
   {
-    date: 'Apr 2026 - Present',
+    date: 'Jul 2025 - Present',
     title: 'Pre-Final Year @ IIT Bhilai',
     description:
-      'CGPA 9.08 in Data Science & AI. Focused on distributed systems, database internals, and production ML pipelines. Building ACORDE, Kudos, and various AI-powered tools.',
+      'CGPA 9.16 in Data Science & AI. Focused on distributed systems, database internals, and production ML pipelines. Building ACORDE, Kudos, and various AI-powered tools.',
     icon: <GraduationCap size={20} />,
     color: 'from-blue-500 to-blue-600',
+  },
+  {
+    date: 'Jun 2026 - Aug 2026',
+    title: 'OpenSSF LFX Mentee',
+    description:
+      'Selected for the Linux Foundation LFX Mentorship Program through OpenSSF. Contributed to Repository Service for TUF (RSTUF), working on secure software supply-chain infrastructure, artifact signing workflows, and repository management tooling.',
+    icon: <Trophy size={20} />,
+    color: 'from-yellow-500 to-amber-600',
   },
   {
     date: '2025',
     title: 'Major Project Year',
     description:
-      'Built BitTorrent Client from scratch in Go. Started Kudos (token-economy social platform) and ACORDE (CRDT-based distributed sync engine). Created GitIntel, RAGfolio, B+ Tree implementation, and more.',
+      'Built a BitTorrent Client from scratch in Go. Started Kudos (token-economy social platform) and ACORDE (CRDT-based distributed sync engine). Created GitIntel, RAGfolio, a B+ Tree implementation, and other systems-focused projects.',
     icon: <Code size={20} />,
     color: 'from-purple-500 to-purple-600',
   },
@@ -45,9 +53,9 @@ const timelineData: TimelineEvent[] = [
   },
   {
     date: '2024',
-    title: 'Dual Internships: MOSIP & FOSSEE',
+    title: 'MOSIP & FOSSEE Internships',
     description:
-      'Double selection at MOSIP through C4GT (Sprint + DMP cohorts) — worked on digital identity infrastructure implementing ISO/IEC 18013-5 mDoc format and W3C Verifiable Credentials. FOSSEE Summer Fellowship at IIT Bombay working on OSDAG.',
+      'Selected for both MOSIP (C4GT Sprint + DMP cohorts) and the FOSSEE Summer Fellowship at IIT Bombay. Worked on digital identity infrastructure implementing ISO/IEC 18013-5 mDoc format, W3C Verifiable Credentials, and structural engineering software development through OSDAG.',
     icon: <Trophy size={20} />,
     color: 'from-orange-500 to-orange-600',
   },
@@ -141,7 +149,7 @@ export const TimelineVisualization: React.FC = () => {
         {/* Stats Summary */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
           <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-1">9.08</div>
+            <div className="text-3xl font-bold text-blue-600 mb-1">9.16</div>
             <div className="text-sm text-gray-600 dark:text-gray-400">CGPA</div>
           </div>
           <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 border border-purple-200 dark:border-purple-800 rounded-xl p-6 text-center">
