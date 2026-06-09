@@ -26,15 +26,19 @@ const Hero = () => {
         </h2>
 
         <p className="text-gray-600 dark:text-gray-300">
-          Pre-final year DSAI @ IIT Bhilai · CGPA 9.08 · Building from-scratch systems in Go, Rust, and Python
+          Pre-final year DSAI @ IIT Bhilai · CGPA 9.16 · Building from-scratch systems in Go, Rust, and Python
         </p>
 
         <p className="text-gray-700 dark:text-gray-300">
           Skilled in Go, Python, Rust, C/C++, TypeScript, Next.js, PostgreSQL, libp2p, and CRDTs.
           Built a BitTorrent client from scratch, CRDT-based sync engines (ACORDE),
-          and LLM-powered analysis tools. Led{" "}
+          and LLM-powered analysis tools. Selected as a Mentee in {" "}
+          <span className="font-semibold text-primary">LFX Mentorship Program</span>{" "}
+          at{" "}
+          <span className="font-semibold text-primary">RSTUF, OpenSSF</span>.
+          Led{" "}
           <span className="font-semibold text-secondary">OpenLake</span>{" "}
-          (open-source society, IIT Bhilai) as Coordinator · Intern at{" "}
+          (open-source society, IIT Bhilai) as Coordinator · Interned at{" "}
           <span className="font-semibold text-secondary">MOSIP/C4GT</span>{" "}
           and{" "}
           <span className="font-semibold text-secondary">FOSSEE, IIT Bombay</span>
