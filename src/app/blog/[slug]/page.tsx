@@ -22,9 +22,9 @@ import {
 
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -37,7 +37,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
-  const post = getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     return {
@@ -51,8 +52,9 @@ export async function generateMetadata({
   };
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getPostBySlug(params.slug);
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     notFound();
@@ -109,7 +111,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.tags.map((tag, index) => (
                   <Link
                     key={index}
-                    // href={`/blog/tag/${tag.toLowerCase()}`}
                     href={`/blog`}
                     className="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                   >
@@ -161,11 +162,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Right Sidebar - Widgets */}
         <div className="space-y-4">
-          <QuickActionsWidget title={post.title} slug={params.slug} />
-          <TableOfContentsWidget slug={params.slug} />
-          {/* <PopularPostsWidget /> */}
+          <QuickActionsWidget title={post.title} slug={slug} />
+          <TableOfContentsWidget slug={slug} />
           <TechStackWidget />
-          {/* <RelatedPostsWidget /> */}
           <NewsletterWidget />
         </div>
       </div>

@@ -31,7 +31,7 @@ const EducationWidget: React.FC = () => {
             B.Tech in Data Science & Artificial Intelligence
           </p>
           <p className="text-xs text-gray-500 dark:text-gray-500">
-            2023 - 2027 (Expected) | CGPA: 9.16 (so far)
+            2023 - 2027 (Expected) | CGPA: 9.18 (so far)
           </p>
           <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
             <h5 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -91,8 +91,13 @@ const EducationWidget: React.FC = () => {
 const AchievementsWidget: React.FC = () => {
   const achievements = [
     {
-      title: "MOSIP C4GT Intern",
-      description: "Selected for prestigious Code for GovTech internship",
+      title: "LFX Mentee — RSTUF, OpenSSF",
+      description: "Linux Foundation LFX Mentorship, supply-chain security",
+      year: "2026",
+    },
+    {
+      title: "MOSIP C4GT — 3 Selections",
+      description: "Sprint '25, DMP '25 (from 4000+ applicants), Project Intern",
       year: "2025",
     },
     {
@@ -102,13 +107,28 @@ const AchievementsWidget: React.FC = () => {
     },
     {
       title: "OpenLake Coordinator",
-      description: "Leading IIT Bhilai's premier open-source club",
+      description: "Led IIT Bhilai's open-source club for a year",
+      year: "2025-26",
+    },
+    {
+      title: "Captain, AWS Cloud Club",
+      description: "Leading the AWS Cloud Club chapter at IIT Bhilai",
+      year: "2025-26",
+    },
+    {
+      title: "Winner, Trustathon",
+      description: "Hackathon by the de.ci.phe.red lab",
+      year: "2025",
+    },
+    {
+      title: "Speaker, DPG Dialogues '25",
+      description: "Spoke on contributing to digital public goods",
       year: "2025",
     },
     {
       title: "Codeforces Specialist",
-      description: "Rating: 1320+ in competitive programming",
-      year: "2024",
+      description: "Peak rating 1432 in competitive programming",
+      year: "2025",
     },
   ];
 
@@ -148,22 +168,28 @@ const OpenSourceWidget: React.FC = () => {
 
   const contributions = [
     {
-      project: "MOSIP Inji Stack",
-      role: "Core Contributor",
-      description: "mDoc format support & VC revocation mechanism",
-      tech: ["NestJS", "W3C Standards", "Cryptography"],
+      project: "RSTUF / TUF Metadata Visualizer",
+      role: "LFX Mentee",
+      description: "Merged PRs: API proxy bridge, health checks, K8s/Helm integration",
+      tech: ["TUF", "Kubernetes", "Supply Chain Security"],
+    },
+    {
+      project: "MOSIP Inji Certify",
+      role: "Contributor",
+      description: "Merged PRs: mDoc issuance, VC revocation & OpenID4VCI pre-auth flow",
+      tech: ["Spring Boot", "W3C Standards", "Cryptography"],
+    },
+    {
+      project: "sktime / skpro",
+      role: "Contributor",
+      description: "Added KernelMixture distribution; fixed GLM estimator bug",
+      tech: ["Python", "Statistics"],
     },
     {
       project: "OpenLake Projects",
       role: "Maintainer",
-      description: "Leading multiple community initiatives",
-      tech: ["Community", "Mentorship", "Events"],
-    },
-    {
-      project: "Personal Projects",
-      role: "Creator",
-      description: `25+ public repositories with ${contributionCount}+ contributions`,
-      tech: ["Various Tech Stacks"],
+      description: `CI/CD workflows across org repos; ${contributionCount}+ contributions overall`,
+      tech: ["Community", "Mentorship", "GitHub Actions"],
     },
   ];
 
@@ -216,7 +242,7 @@ const OpenSourceWidget: React.FC = () => {
 };
 
 const Resume: React.FC = () => {
-  const allowedIndexes = [0, 1, 4, 5]; // Indexes of projects to show on resume
+  const allowedIndexes = [1, 2, 4, 6]; // ACORDE, BitTorrent Client, AcadMap, HalfLife
   return (
     <div className="py-8 min-h-screen mt-20">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -247,7 +273,7 @@ const Resume: React.FC = () => {
                   Download PDF
                 </Link>
                 <Link
-                  href="mailto:amayd@iitbhilai.ac.in"
+                  href="mailto:amaydixit11@gmail.com"
                   className="flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-medium shadow-md hover:shadow-lg"
                 >
                   Contact Me
@@ -262,13 +288,14 @@ const Resume: React.FC = () => {
               Professional Summary
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              Passionate backend engineer and system designer with hands-on
-              experience in building scalable applications and contributing to
-              open-source projects. Currently pursuing B.Tech at IIT Bhilai
-              while leading technical initiatives as OpenLake Coordinator.
-              Proven track record of delivering impactful solutions through
-              internships at MOSIP and IIT Bombay, with expertise in modern
-              backend technologies and distributed systems.
+              Backend and distributed-systems developer, currently an LFX
+              Mentee at RSTUF (OpenSSF, The Linux Foundation) working on
+              software supply-chain security. Previously spent a year building
+              verifiable-credential infrastructure at MOSIP across three C4GT
+              selections, and a summer at FOSSEE, IIT Bombay. Pre-final year
+              B.Tech in Data Science &amp; AI at IIT Bhilai (CGPA 9.18), where I
+              coordinated OpenLake, the open-source club, and captain the AWS
+              Cloud Club.
             </p>
           </div>
 
@@ -282,7 +309,7 @@ const Resume: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 gap-4">
               {projectsData["projects"].map((project, index) => {
-                if (index in allowedIndexes)
+                if (allowedIndexes.includes(index))
                   return (
                     <div
                       key={index}
@@ -335,10 +362,10 @@ const Resume: React.FC = () => {
               <div>
                 <span className="text-gray-600 dark:text-gray-400">Email:</span>{" "}
                 <Link
-                  href="mailto:amayd@iitbhilai.ac.in"
+                  href="mailto:amaydixit11@gmail.com"
                   className="text-blue-500"
                 >
-                  amayd@iitbhilai.ac.in
+                  amaydixit11@gmail.com
                 </Link>
               </div>
               <div>
@@ -346,7 +373,7 @@ const Resume: React.FC = () => {
                   Location:
                 </span>{" "}
                 <span className="text-gray-900 dark:text-gray-100">
-                  Durg, India
+                  Bhilai, India
                 </span>
               </div>
               <div>
@@ -365,10 +392,10 @@ const Resume: React.FC = () => {
                   LinkedIn:
                 </span>{" "}
                 <Link
-                  href="https://linkedin.com/in/amay-dixit-462113284"
+                  href="https://linkedin.com/in/amaydixit11"
                   className="text-blue-500"
                 >
-                  @amay-dixit
+                  @amaydixit11
                 </Link>
               </div>
               <div>
@@ -376,7 +403,7 @@ const Resume: React.FC = () => {
                   X:
                 </span>{" "}
                 <Link
-                  href="https://X.com/AmayDixit11"
+                  href="https://x.com/AmayDixit11"
                   className="text-blue-500"
                 >
                   @AmayDixit11

@@ -1,9 +1,7 @@
 import { DataSource, DataSourceConfig } from "@/types/pixels";
 import { githubDataSource } from "./sources/github";
 import { codeforcesDataSource } from "./sources/codeforces";
-// import { geeksforgeeksDataSource } from "./sources/gfg";
-// import { leetcodeDataSource } from "./sources/leetcode";
-// import { duolingoDataSource } from "./sources/duolingo";
+
 class DataSourceRegistry {
   private sources: Map<string, DataSource> = new Map();
 
@@ -11,9 +9,6 @@ class DataSourceRegistry {
     // Register all data sources
     this.register(githubDataSource);
     this.register(codeforcesDataSource);
-    // this.register(geeksforgeeksDataSource);
-    // this.register(leetcodeDataSource);
-    // this.register(duolingoDataSource);
   }
 
   register(config: DataSourceConfig): void {
@@ -27,9 +22,7 @@ class DataSourceRegistry {
       fetchData: async () => {
         const result = config.dataProvider();
         if (result instanceof Promise) {
-          if (result instanceof Promise) {
-            return await result;
-          }
+          return await result;
         }
         return result;
       },

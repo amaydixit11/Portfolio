@@ -8,13 +8,15 @@ import { highlightText } from "@/utils/highlightText";
 const getStatusColor = (status: string): string => {
   switch (status) {
     case "Live":
-      return "text-secondary bg-green-50 dark:bg-green-900/20";
+      return "text-green-600 bg-green-50 dark:bg-green-900/20";
+    case "Beta":
+      return "text-blue-600 bg-blue-50 dark:bg-blue-900/20";
     case "In Development":
-      return "text-primary bg-blue-50 dark:bg-blue-900/20";
-    case "In Progress":
       return "text-orange-600 bg-orange-50 dark:bg-orange-900/20";
-    case "Active Research":
+    case "Active":
       return "text-purple-600 bg-purple-50 dark:bg-purple-900/20";
+    case "Research":
+      return "text-pink-600 bg-pink-50 dark:bg-pink-900/20";
     case "Complete":
       return "text-gray-600 bg-gray-50 dark:bg-gray-800";
     default:

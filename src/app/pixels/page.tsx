@@ -60,11 +60,10 @@ const Life = () => {
               About This Visualization
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              This page tracks my daily activities across various platforms.
-              Each heatmap shows my consistency and dedication in different
-              areas - from coding contributions to competitive programming
-              practice. The darker the color, the more active I was on that
-              particular day.
+              These heatmaps are pulled live from the GitHub and Codeforces
+              APIs&mdash;real contributions and real submissions, not
+              placeholder data. Each cell is one day, and the darker the
+              color, the more I got done that day.
             </p>
           </div>
         </div>
@@ -90,8 +89,9 @@ const ConsistencyWidget = () => {
           </h3>
         </div>
         <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-          The goal isn{`&apos`}t perfection—it{`&apos`}s showing up. Every commit, every problem
-          solved, every day of practice adds up over time.
+          The goal isn&apos;t perfection&mdash;it&apos;s showing up. Every
+          GitHub commit and every Codeforces submission lands as a pixel here,
+          and the streaks add up over time.
         </p>
         <div className="flex items-center gap-2 pt-2">
           <div className="flex-1 bg-orange-200 dark:bg-orange-900 rounded-full h-1.5">
@@ -115,7 +115,7 @@ const PhilosophyCard = () => {
         <div className="flex items-center gap-2">
           <Activity size={20} className="text-green-600 dark:text-green-400" />
           <h3 className="font-semibold text-gray-900 dark:text-gray-100">
-            Why Track? 
+            Why Track?
           </h3>
         </div>
 
@@ -124,26 +124,29 @@ const PhilosophyCard = () => {
             <span className="font-medium text-gray-900 dark:text-gray-100">
               Visibility:
             </span>{" "}
-            You cant improve what you cant see.
+            You can&apos;t improve what you can&apos;t see. The grid makes a
+            slow week impossible to ignore.
           </p>
           <p>
             <span className="font-medium text-gray-900 dark:text-gray-100">
               Motivation:
             </span>{" "}
-            Watching progress—no matter how small—keeps the fire going.
+            An unbroken run of green squares is surprisingly hard to walk away
+            from.
           </p>
           <p>
             <span className="font-medium text-gray-900 dark:text-gray-100">
               Reflection:
             </span>{" "}
-            Tracking turns experience into insight by revealing patterns over
-            time.
+            A year of commits and contest submissions in one view shows
+            patterns I&apos;d never notice day to day.
           </p>
         </div>
 
         <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
           <p className="text-xs text-gray-500 dark:text-gray-500 italic">
-            {`&quot;`}Small daily improvements compound into remarkable results.{`&quot;`}
+            &ldquo;Small daily improvements compound into remarkable
+            results.&rdquo;
           </p>
         </div>
       </div>

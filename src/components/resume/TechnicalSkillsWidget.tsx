@@ -18,33 +18,42 @@ const TechnicalSkillsWidget: React.FC = () => {
     },
     {
       category: "Backend & Frameworks",
-      skills: ["Next.js", "FastAPI", "Node.js", "NestJS", "React", "Tauri"],
+      skills: ["Next.js", "FastAPI", "Spring Boot", "Node.js", "Django", "Go (Gin)", "React"],
       color:
         "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300",
     },
     {
       category: "Databases",
-      skills: ["PostgreSQL", "MongoDB", "SQLite", "Supabase", "Neo4j", "Firebase"],
+      skills: ["PostgreSQL", "Redis", "MongoDB", "SQLite", "Supabase", "Neo4j"],
       color:
         "bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300",
     },
     {
       category: "Systems & Protocols",
-      skills: ["libp2p", "CRDT", "gRPC", "GraphQL", "BitTorrent BEP", "DHT", "OpenID4VCI"],
+      skills: ["libp2p", "CRDT", "gRPC", "GraphQL", "BitTorrent BEP", "DHT", "OpenID4VCI", "TUF"],
       color:
         "bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300",
     },
     {
-      category: "Tools & DevOps",
+      category: "DevOps & Infra",
       skills: [
         "Docker",
+        "Kubernetes",
+        "Helm",
         "GitHub Actions",
-        "Git",
+        "AWS",
+        "Grafana",
+        "Prometheus",
         "Linux",
-        "CI/CD",
       ],
       color:
         "bg-gray-50 dark:bg-gray-900/20 text-gray-700 dark:text-gray-300",
+    },
+    {
+      category: "ML / AI",
+      skills: ["RAG Systems", "LangChain", "PyTorch", "Scikit-learn"],
+      color:
+        "bg-pink-50 dark:bg-pink-900/20 text-pink-700 dark:text-pink-300",
     },
   ];
 

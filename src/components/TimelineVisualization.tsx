@@ -20,20 +20,20 @@ interface TimelineEvent {
 
 const timelineData: TimelineEvent[] = [
   {
+    date: 'May 2026 - Present',
+    title: 'LFX Mentee @ RSTUF, OpenSSF',
+    description:
+      'Selected for the Linux Foundation LFX Mentorship Program through OpenSSF. Working on Repository Service for TUF (RSTUF): custom signing-key support and delegation, Kubernetes/Helm integration of the TUF Metadata Visualizer, and supply-chain security infrastructure.',
+    icon: <Trophy size={20} />,
+    color: 'from-yellow-500 to-amber-600',
+  },
+  {
     date: 'Jul 2025 - Present',
     title: 'Pre-Final Year @ IIT Bhilai',
     description:
-      'CGPA 9.16 in Data Science & AI. Focused on distributed systems, database internals, and production ML pipelines. Building ACORDE, Kudos, and various AI-powered tools.',
+      'CGPA 9.18 in Data Science & AI. Focused on distributed systems, database internals, and retrieval systems. Building ACORDE, HalfLife, and Kudos. Also serving as Captain of the AWS Cloud Club.',
     icon: <GraduationCap size={20} />,
     color: 'from-blue-500 to-blue-600',
-  },
-  {
-    date: 'Jun 2026 - Aug 2026',
-    title: 'OpenSSF LFX Mentee',
-    description:
-      'Selected for the Linux Foundation LFX Mentorship Program through OpenSSF. Contributed to Repository Service for TUF (RSTUF), working on secure software supply-chain infrastructure, artifact signing workflows, and repository management tooling.',
-    icon: <Trophy size={20} />,
-    color: 'from-yellow-500 to-amber-600',
   },
   {
     date: '2025',
@@ -44,18 +44,18 @@ const timelineData: TimelineEvent[] = [
     color: 'from-purple-500 to-purple-600',
   },
   {
-    date: '2024-2025',
+    date: '2025-2026',
     title: 'OpenLake Coordinator',
     description:
-      'Led OpenLake (IIT Bhilai\'s open-source society) for 1 year. Set technical roadmaps, organized workshops and hackathons, mentored juniors into productive contributors. Led Leaderboard-Pro project.',
+      'Led OpenLake (IIT Bhilai\'s open-source society) for 1 year after a year as core member. Set technical roadmaps, organized workshops and hackathons, mentored juniors into productive contributors.',
     icon: <Briefcase size={20} />,
     color: 'from-green-500 to-green-600',
   },
   {
-    date: '2024',
+    date: '2025',
     title: 'MOSIP & FOSSEE Internships',
     description:
-      'Selected for both MOSIP (C4GT Sprint + DMP cohorts) and the FOSSEE Summer Fellowship at IIT Bombay. Worked on digital identity infrastructure implementing ISO/IEC 18013-5 mDoc format, W3C Verifiable Credentials, and structural engineering software development through OSDAG.',
+      'Three selections at MOSIP through C4GT (Sprint, DMP — picked from 4000+ applicants — and a project internship) working on W3C Verifiable Credentials, ISO/IEC 18013-5 mDoc issuance, and OpenID4VCI. Also a FOSSEE Summer Fellowship at IIT Bombay on Osdag. Won the Trustathon hackathon by the de.ci.phe.red lab.',
     icon: <Trophy size={20} />,
     color: 'from-orange-500 to-orange-600',
   },
@@ -149,20 +149,20 @@ export const TimelineVisualization: React.FC = () => {
         {/* Stats Summary */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
           <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-1">9.16</div>
+            <div className="text-3xl font-bold text-blue-600 mb-1">9.18</div>
             <div className="text-sm text-gray-600 dark:text-gray-400">CGPA</div>
           </div>
           <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 border border-purple-200 dark:border-purple-800 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-purple-600 mb-1">2</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Internships</div>
+            <div className="text-3xl font-bold text-purple-600 mb-1">5</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">Internship Selections</div>
           </div>
           <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 border border-green-200 dark:border-green-800 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-green-600 mb-1">11+</div>
+            <div className="text-3xl font-bold text-green-600 mb-1">10+</div>
             <div className="text-sm text-gray-600 dark:text-gray-400">Projects</div>
           </div>
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 border border-orange-200 dark:border-orange-800 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-orange-600 mb-1">1yr</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Leadership</div>
+            <div className="text-3xl font-bold text-orange-600 mb-1">2</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">Clubs Led</div>
           </div>
         </div>
       </div>

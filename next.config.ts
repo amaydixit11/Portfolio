@@ -7,25 +7,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "placehold.co",
-      },
-      {
-        protocol: "https",
-        hostname: "media.licdn.com",
-      },
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-      {
-        protocol: "https",
         hostname: "avatars.githubusercontent.com",
       },
-      {
-        protocol: "https",
-        hostname: "www.pngkey.com",
-      },
-
     ],
   },
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],

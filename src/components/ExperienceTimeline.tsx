@@ -15,16 +15,16 @@ interface TimelineItem {
 
 const experienceData: TimelineItem[] = [
   {
-    organization: "OpenSSF via Linux Foundation",
+    organization: "RSTUF · OpenSSF, The Linux Foundation",
     roles: [
       {
         title: "LFX Mentee",
-        period: "June, 2026 - August, 2026",
+        period: "May, 2026 - August, 2026",
         description:
-          "Selected for the Linux Foundation's LFX Mentorship Program through OpenSSF. Contributing to Repository Service for TUF (RSTUF), working on secure software supply-chain infrastructure, repository management, artifact signing workflows, and improvements to The Update Framework (TUF) ecosystem.",
+          "Selected for the Linux Foundation's LFX Mentorship Program through OpenSSF. Working on Repository Service for TUF (RSTUF): implementing custom signing-key support and delegation for secure software distribution, containerizing the TUF Metadata Visualizer and integrating it into Kubernetes-based RSTUF deployments with Helm, and expanding test coverage and documentation.",
       },
     ],
-    logoUrl: "https://www.pngkey.com/png/detail/237-2373304_linux-foundation-logo.png",
+    logoUrl: "https://avatars.githubusercontent.com/repository-service-tuf",
   },
   {
     organization: "MOSIP via C4GT",
@@ -51,6 +51,18 @@ const experienceData: TimelineItem[] = [
     logoUrl: "https://avatars.githubusercontent.com/u/39733477?s=280&v=4",
   },
   {
+    organization: "AWS Cloud Club, IIT Bhilai",
+    roles: [
+      {
+        title: "Captain",
+        period: "April, 2025 - April, 2026",
+        description:
+          "Leading the AWS Cloud Club chapter at IIT Bhilai — running cloud-computing workshops, hands-on AWS sessions, and community events to get students building on cloud infrastructure.",
+      },
+    ],
+    logoUrl: "https://avatars.githubusercontent.com/aws",
+  },
+  {
     organization: "OpenLake Club, IIT Bhilai",
     roles: [
       {
@@ -75,7 +87,7 @@ const experienceData: TimelineItem[] = [
         title: "FOSSEE Summer Fellow",
         period: "May, 2025 - July, 2025",
         description:
-          "Selected for the FOSSEE Summer Fellowship at IIT Bombay. Contributed to OSDAG, an open-source structural steel design platform, supporting the mission of democratizing engineering design tools through collaborative development.",
+          "Selected for the FOSSEE Summer Fellowship at IIT Bombay. Contributed full-stack work (React, Django) to Osdag, an open-source structural steel design platform — profiled and reworked API data flow, cutting redundant data transfer by ~40%.",
       },
     ],
     logoUrl: "https://avatars.githubusercontent.com/u/19796505?v=4",

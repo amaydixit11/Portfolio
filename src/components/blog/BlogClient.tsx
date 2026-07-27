@@ -4,7 +4,6 @@ import React, { useState, useMemo } from 'react';
 import { BlogCard } from './BlogCard';
 import { BlogPost } from '@/types/blog';
 import { Filter, Search, Tag } from 'lucide-react';
-import Link from 'next/link';
 
 interface BlogPageClientProps {
   posts: BlogPost[];
@@ -121,32 +120,14 @@ export const BlogPageClient: React.FC<BlogPageClientProps> = ({ posts, tags, cat
                   <Search className="h-8 w-8 text-gray-400" />
                 </div>
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-                  {searchQuery ? 'No posts found' : 'Coming Soon'}
+                  No posts found
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 max-w-md mx-auto">
-                  {searchQuery 
+                  {searchQuery
                     ? `No posts match "${searchQuery}". Try a different search term or browse by category.`
-                    : `I'm working on some interesting posts about system design, backend development, and my experiences with open source. Check back soon!`
+                    : `No posts match your current filter. Try selecting a different category.`
                   }
                 </p>
-                {!searchQuery && (
-                  <div className="text-sm text-gray-500 dark:text-gray-500">
-                    In the meantime, feel free to check out my{" "}
-                    <Link href="/projects" className="text-blue-600 dark:text-blue-400 hover:underline">
-                      projects
-                    </Link>{" "}
-                    or connect with me on{" "}
-                    <a 
-                      href="https://x.com/AmayDixit11" 
-                      className="text-blue-600 dark:text-blue-400 hover:underline"
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      X
-                    </a>
-                    .
-                  </div>
-                )}
               </div>
             </div>
           )}
@@ -213,13 +194,14 @@ export const BlogPageClient: React.FC<BlogPageClientProps> = ({ posts, tags, cat
               </h3>
               <div className="flex flex-wrap gap-2">
                 {tags.slice(0, 10).map((tag, index) => (
-                  <Link
+                  <button
                     key={index}
-                    href={`/blog/tag/${tag.toLowerCase()}`}
+                    type="button"
+                    onClick={() => setSearchQuery(tag)}
                     className="text-xs px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                   >
                     {tag}
-                  </Link>
+                  </button>
                 ))}
               </div>
             </div>
@@ -243,16 +225,24 @@ export const BlogPageClient: React.FC<BlogPageClientProps> = ({ posts, tags, cat
               Stay Updated
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-              Follow me on X for updates when I publish new posts.
+              Follow me on X or drop me an email for updates when I publish new posts.
             </p>
-            <a
-              href="https://x.com/AmayDixit11"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
-            >
-              Follow on X
-            </a>
+            <div className="space-y-3">
+              <a
+                href="https://x.com/AmayDixit11"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+              >
+                Follow on X
+              </a>
+              <a
+                href="mailto:amaydixit11@gmail.com"
+                className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+              >
+                Email me
+              </a>
+            </div>
           </div>
         </div>
       </div>

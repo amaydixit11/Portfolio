@@ -20,7 +20,6 @@ import {
 } from "@/data/about";
 import { highlightText } from "@/utils/highlightText";
 import ConnectWidget from "@/components/about/ConnectWidget";
-import Map from "@/components/about/Map";
 import { SkillsVisualization } from "@/components/SkillsVisualization";
 import { TimelineVisualization } from "@/components/TimelineVisualization";
 
@@ -79,8 +78,8 @@ const About: React.FC = () => {
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               Always open to chatting about tech, projects, or ideas. Connect via my
               Quick Links or email me at{" "}
-              <a href="mailto:amayd@iitbhilai.ac.in" className="text-blue-500">
-                amayd@iitbhilai.ac.in
+              <a href="mailto:amaydixit11@gmail.com" className="text-blue-500">
+                amaydixit11@gmail.com
               </a>
             </p>
           </div>
@@ -93,11 +92,9 @@ const About: React.FC = () => {
             currentTime={currentTime}
           />
           <StatusWidget activity={currentActivity} />
-          {/* <SpotifyWidget track={currentTrack} /> */}
           <AchievementsWidget achievements={achievementsData} />
           <LearningWidget technologies={learningData} />
           <QuickLinksWidget links={quickLinksData} />
-          <Map />
         </div>
       </div>
     </div>

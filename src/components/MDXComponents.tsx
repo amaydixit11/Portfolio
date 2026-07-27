@@ -64,6 +64,31 @@ type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> & {
   children?: React.ReactNode;
 };
 
+// Recursively extract the plain text content of a React node
+const getTextContent = (node: React.ReactNode): string => {
+  if (node == null || typeof node === "boolean") return "";
+  if (typeof node === "string" || typeof node === "number") {
+    return String(node);
+  }
+  if (Array.isArray(node)) return node.map(getTextContent).join("");
+  if (React.isValidElement(node)) {
+    const { children } = node.props as { children?: React.ReactNode };
+    return getTextContent(children);
+  }
+  return "";
+};
+
+// GitHub-style heading slug: lowercase, non-alphanumerics to hyphens,
+// collapse repeats, trim leading/trailing hyphens
+const slugify = (text: string): string =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+const headingId = (children: React.ReactNode): string =>
+  slugify(getTextContent(children));
+
 type GenericProps<T extends HTMLElement> = React.HTMLAttributes<T> & {
   children?: React.ReactNode;
 };
@@ -71,6 +96,7 @@ type GenericProps<T extends HTMLElement> = React.HTMLAttributes<T> & {
 export const MDXComponents: MDXComponentsType = {
   h1: ({ children, ...props }: HeadingProps) => (
     <h1
+      id={headingId(children)}
       className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6 mt-8"
       {...props}
     >
@@ -79,6 +105,7 @@ export const MDXComponents: MDXComponentsType = {
   ),
   h2: ({ children, ...props }: HeadingProps) => (
     <h2
+      id={headingId(children)}
       className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4 mt-8"
       {...props}
     >
@@ -87,6 +114,7 @@ export const MDXComponents: MDXComponentsType = {
   ),
   h3: ({ children, ...props }: HeadingProps) => (
     <h3
+      id={headingId(children)}
       className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3 mt-6"
       {...props}
     >

@@ -1,15 +1,19 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Sun, Moon, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Header() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   return (
-    <header className="w-full border-b border-border/40 bg-background/95 backdrop-blur-sm sticky top-0 z-50">
+    <header className="w-full border-b border-gray-200 dark:border-gray-800 bg-white/95 dark:bg-gray-950/95 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-full mx-auto flex items-center justify-between h-16 px-4 sm:px-6">
         {/* Left - Logo/Name */}
         <div className="md:hidden flex items-center justify-end mr-5 mt-3">
@@ -36,7 +40,7 @@ export default function Header() {
           {/* Status indicator */}
           <div className="hidden sm:flex items-center gap-2">
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-sm text-muted-foreground">
+            <span className="text-sm text-gray-600 dark:text-gray-400">
               Available for opportunities
             </span>
           </div>
@@ -48,21 +52,21 @@ export default function Header() {
           <div className="flex items-center gap-2">
             <Link
               href="https://github.com/amaydixit11"
-              className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-accent/20 transition"
+              className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition"
               aria-label="GitHub"
             >
               <Github size={18} />
             </Link>
             <Link
               href="https://x.com/AmayDixit11"
-              className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-accent/20 transition"
+              className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition"
               aria-label="X"
             >
               <Twitter size={18} />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/amay-dixit-462113284"
-              className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-accent/20 transition"
+              href="https://linkedin.com/in/amaydixit11"
+              className="flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition"
               aria-label="LinkedIn"
             >
               <Linkedin size={18} />
@@ -71,16 +75,20 @@ export default function Header() {
 
           {/* Theme toggle */}
           <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="flex items-center justify-center w-9 h-9 rounded-full border border-border bg-background hover:bg-accent/20 transition"
+            onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+            className="flex items-center justify-center w-9 h-9 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
             aria-label="Toggle theme"
           >
-            {theme === "dark" ? <Moon size={16} /> : <Sun size={16} />}
+            {mounted && resolvedTheme === "dark" ? (
+              <Sun size={16} />
+            ) : (
+              <Moon size={16} />
+            )}
           </button>
 
           {/* CTA Button */}
           <Link
-            href="mailto:amayd@iitbhilai.ac.in"
+            href="mailto:amaydixit11@gmail.com"
             className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg shadow-sm transition"
           >
             <Mail size={16} />

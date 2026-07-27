@@ -127,8 +127,7 @@ export default function RootLayout({
               "image": "https://amaydixit11.vercel.app/amay2.jpeg",
               "jobTitle": "Backend Engineer & Open Source Developer",
               "description": "Backend Engineer specializing in system design and scalable applications. Open Source contributor to MOSIP and FOSSEE projects.",
-              "email": "amayd@iitbhilai.ac.in",
-              "telephone": "+91-XXXXXXXXXX", // Add if you want
+              "email": "amaydixit11@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Durg",
@@ -156,18 +155,13 @@ export default function RootLayout({
               "sameAs": [
                 "https://github.com/amaydixit11",
                 "https://x.com/AmayDixit11",
-                "https://www.linkedin.com/in/amay-dixit-462113284"
+                "https://linkedin.com/in/amaydixit11"
               ],
               "worksFor": [
                 {
                   "@type": "Organization",
-                  "name": "MOSIP",
-                  "url": "https://mosip.io"
-                },
-                {
-                  "@type": "Organization", 
-                  "name": "FOSSEE, IIT Bombay",
-                  "url": "https://fossee.in"
+                  "name": "OpenSSF, The Linux Foundation (LFX Mentorship)",
+                  "url": "https://openssf.org"
                 }
               ]
             })

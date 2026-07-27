@@ -1,16 +1,10 @@
 "use client";
 
-import { formatDate } from "@/utils/blog";
 import {
-  ArrowLeft,
-  Tag,
   Share2,
   BookOpen,
-  TrendingUp,
   MessageCircle,
-  Eye,
   Heart,
-  User,
   Rss,
 } from "lucide-react";
 import Link from "next/link";
@@ -18,7 +12,7 @@ import React from "react";
 
 // Table of Contents Widget
 export const TableOfContentsWidget: React.FC<{ slug: string }> = ({ slug }) => {
-const tocItems = {
+  const tocItems = {
     "meta-learning": [
       { id: "introduction", title: "Introduction", level: 1 },
       {
@@ -31,7 +25,11 @@ const tocItems = {
         title: "The Meta-Learning Idea",
         level: 1,
       },
-      { id: "what-ill-be-building", title: "What I'll Be Building", level: 1 },
+      {
+        id: "what-i-ll-be-building",
+        title: "What I'll Be Building",
+        level: 1,
+      },
       {
         id: "implementation-plan-high-level",
         title: "Implementation Plan (High-Level)",
@@ -100,12 +98,11 @@ const tocItems = {
         level: 1,
       },
       {
-        id: "third-times-the-charm",
+        id: "third-time-s-the-charm",
         title: "Third Time's the Charm",
         level: 2,
       },
-      { id: "how-it-works", title: "How It Works", level: 2 },
-      { id: "what-im-building", title: "What I'm Building", level: 2 },
+      { id: "what-i-m-building", title: "What I'm Building", level: 2 },
       {
         id: "the-rewards-more-than-just-money",
         title: "The Rewards: More Than Just Money",
@@ -117,7 +114,7 @@ const tocItems = {
         title: "The Recognition Package",
         level: 2,
       },
-      { id: "what-ive-learned", title: "What I've Learned", level: 1 },
+      { id: "what-i-ve-learned", title: "What I've Learned", level: 1 },
       { id: "technical-growth", title: "Technical Growth", level: 2 },
       { id: "beyond-code", title: "Beyond Code", level: 2 },
       {
@@ -138,12 +135,12 @@ const tocItems = {
       },
       { id: "think-about-impact", title: "Think About Impact", level: 2 },
       { id: "document-everything", title: "Document Everything", level: 2 },
-      { id: "whats-next", title: "What's Next", level: 1 },
+      { id: "what-s-next", title: "What's Next", level: 1 },
       { id: "final-thoughts", title: "Final Thoughts", level: 1 },
       { id: "acknowledgments", title: "Acknowledgments", level: 1 },
       { id: "connect-learn-more", title: "Connect & Learn More", level: 1 },
     ],
-    "kudos-architecture": [
+    kudos: [
       {
         id: "introduction-the-problem-with-free-likes",
         title: "Introduction: The Problem With Free Likes",
@@ -155,7 +152,7 @@ const tocItems = {
         level: 1,
       },
       {
-        id: "what-tokens-are-and-arent",
+        id: "what-tokens-are-and-aren-t",
         title: "What Tokens Are (and Aren't)",
         level: 2,
       },
@@ -165,7 +162,7 @@ const tocItems = {
         level: 1,
       },
       {
-        id: "the-602020-split",
+        id: "the-60-20-20-split",
         title: "The 60/20/20 Split",
         level: 2,
       },
@@ -290,7 +287,7 @@ const tocItems = {
         level: 1,
       },
       {
-        id: "10-the-frontend-nextjs-with-zustand-and-react-query",
+        id: "10-the-frontend-next-js-with-zustand-and-react-query",
         title: "10. The Frontend: Next.js with Zustand and React Query",
         level: 1,
       },
@@ -325,28 +322,64 @@ const tocItems = {
         level: 1,
       },
       {
-        id: "whats-next",
+        id: "what-s-next",
         title: "What's Next",
         level: 1,
       },
     ],
-  "halflife": [
-  { id: "introduction-the-problem-rag-doesnt-know-it-has", title: "Introduction: The Problem RAG Doesn't Know It Has", level: 1 },
-  { id: "1-the-core-insight-information-has-a-half-life", title: "1. The Core Insight: Information Has a Half-Life", level: 1 },
-  { id: "2-query-intent-not-all-questions-are-created-equal", title: "2. Query Intent: Not All Questions Are Created Equal", level: 1 },
-  { id: "3-decay-functions-modeling-information-aging", title: "3. Decay Functions: Modeling Information Aging", level: 1 },
-  { id: "exponential-decay", title: "Exponential Decay", level: 2 },
-  { id: "piecewise-decay", title: "Piecewise Decay", level: 2 },
-  { id: "learned-decay", title: "Learned Decay", level: 2 },
-  { id: "4-the-metadata-architecture-redis--qdrant", title: "4. The Metadata Architecture: Redis + Qdrant", level: 1 },
-  { id: "5-the-fusion-layer-min-max-normalization", title: "5. The Fusion Layer: Min-Max Normalization", level: 1 },
-  { id: "6-the-adversarial-benchmark-proving-it-works", title: "6. The Adversarial Benchmark: Proving It Works", level: 1 },
-  { id: "results", title: "Results", level: 2 },
-  { id: "7-the-feedback-loop-and-event-bus", title: "7. The Feedback Loop and Event Bus", level: 1 },
-  { id: "8-integration-two-lines-of-code", title: "8. Integration: Two Lines of Code", level: 1 },
-  { id: "9-what-i-learned", title: "9. What I Learned", level: 1 },
-  { id: "whats-next", title: "What's Next", level: 1 },
-],
+    halflife: [
+      {
+        id: "introduction-the-problem-rag-doesn-t-know-it-has",
+        title: "Introduction: The Problem RAG Doesn't Know It Has",
+        level: 1,
+      },
+      {
+        id: "1-the-core-insight-information-has-a-half-life",
+        title: "1. The Core Insight: Information Has a Half-Life",
+        level: 1,
+      },
+      {
+        id: "2-query-intent-not-all-questions-are-created-equal",
+        title: "2. Query Intent: Not All Questions Are Created Equal",
+        level: 1,
+      },
+      {
+        id: "3-decay-functions-modeling-information-aging",
+        title: "3. Decay Functions: Modeling Information Aging",
+        level: 1,
+      },
+      { id: "exponential-decay", title: "Exponential Decay", level: 2 },
+      { id: "piecewise-decay", title: "Piecewise Decay", level: 2 },
+      { id: "learned-decay", title: "Learned Decay", level: 2 },
+      {
+        id: "4-the-metadata-architecture-redis-qdrant",
+        title: "4. The Metadata Architecture: Redis + Qdrant",
+        level: 1,
+      },
+      {
+        id: "5-the-fusion-layer-min-max-normalization",
+        title: "5. The Fusion Layer: Min-Max Normalization",
+        level: 1,
+      },
+      {
+        id: "6-the-adversarial-benchmark-proving-it-works",
+        title: "6. The Adversarial Benchmark: Proving It Works",
+        level: 1,
+      },
+      { id: "results", title: "Results", level: 2 },
+      {
+        id: "7-the-feedback-loop-and-event-bus",
+        title: "7. The Feedback Loop and Event Bus",
+        level: 1,
+      },
+      {
+        id: "8-integration-two-lines-of-code",
+        title: "8. Integration: Two Lines of Code",
+        level: 1,
+      },
+      { id: "9-what-i-learned", title: "9. What I Learned", level: 1 },
+      { id: "what-s-next", title: "What's Next", level: 1 },
+    ],
   };
 
   return (
@@ -374,291 +407,32 @@ const tocItems = {
   );
 };
 
-// Share Widget
-export const ShareWidget: React.FC<{ title: string; slug: string }> = ({
-  title,
-  slug,
-}) => {
-  const shareUrl = `${
-    typeof window !== "undefined" ? window.location.origin : ""
-  }/blog/${slug}`;
-
-  const shareLinks = [
-    {
-      name: "Twitter",
-      url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-        title
-      )}&url=${encodeURIComponent(shareUrl)}`,
-      color: "hover:text-blue-500",
-    },
-    {
-      name: "LinkedIn",
-      url: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-        shareUrl
-      )}`,
-      color: "hover:text-blue-700",
-    },
-    {
-      name: "Copy Link",
-      url: "#",
-      color: "hover:text-gray-700 dark:hover:text-gray-300",
-    },
-  ];
-
-  return (
-    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-      <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-        <Share2 size={18} />
-        Share Article
-      </h3>
-      <div className="space-y-3">
-        {shareLinks.map((link) => (
-          <button
-            key={link.name}
-            className={`w-full text-left text-sm text-gray-600 dark:text-gray-400 ${link.color} transition-colors p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800`}
-            onClick={() => {
-              if (link.name === "Copy Link") {
-                navigator.clipboard.writeText(shareUrl);
-              } else {
-                window.open(link.url, "_blank", "noopener,noreferrer");
-              }
-            }}
-          >
-            {link.name}
-          </button>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-// Related Posts Widget
-export const RelatedPostsWidget: React.FC = () => {
-  // Mock related posts - in real app, this would be fetched based on tags or categories
-  const relatedPosts = [
-    {
-      title: "Understanding React Server Components",
-      slug: "react-server-components",
-      readingTime: "8 min read",
-      date: "2024-01-15",
-    },
-    {
-      title: "Next.js 14: What's New",
-      slug: "nextjs-14-whats-new",
-      readingTime: "6 min read",
-      date: "2024-01-10",
-    },
-    {
-      title: "Building Scalable APIs",
-      slug: "building-scalable-apis",
-      readingTime: "12 min read",
-      date: "2024-01-05",
-    },
-  ];
-
-  return (
-    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-      <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-        <TrendingUp size={18} />
-        Related Posts
-      </h3>
-      <div className="space-y-4">
-        {relatedPosts.map((post, index) => (
-          <Link key={index} href={`/blog/${post.slug}`} className="block group">
-            <div className="pb-3 border-b border-gray-100 dark:border-gray-800 last:border-b-0">
-              <h4 className="font-medium text-gray-900 dark:text-gray-100 text-sm group-hover:text-primary transition-colors mb-1">
-                {post.title}
-              </h4>
-              <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-500">
-                <span>{formatDate(post.date)}</span>
-                <span>•</span>
-                <span>{post.readingTime}</span>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
-      <div className="pt-3 border-t border-gray-200 dark:border-gray-700 mt-4">
-        <Link
-          href="/blog"
-          className="text-sm text-primary hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1"
-        >
-          View all posts <ArrowLeft size={12} className="rotate-180" />
-        </Link>
-      </div>
-    </div>
-  );
-};
-
-// Author Widget
-export const AuthorWidget: React.FC = () => {
-  return (
-    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-      <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-        <User size={18} />
-        About the Author
-      </h3>
-      <div className="text-center">
-        <div className="w-16 h-16 bg-gradient-to-br from-primary to-purple-600 rounded-full mx-auto mb-3 flex items-center justify-center text-white font-bold text-lg">
-          AD
-        </div>
-        <h4 className="font-medium text-gray-900 dark:text-gray-100 mb-1">
-          Amay Dixit
-        </h4>
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-          Backend Engineer & Open Source Enthusiast
-        </p>
-        <p className="text-xs text-gray-500 dark:text-gray-500 mb-4">
-          B.Tech CSE @ IIT Bhilai. Passionate about system design and scalable
-          applications.
-        </p>
-        <div className="flex gap-2 justify-center">
-          <Link
-            href="https://github.com/amaydixit11"
-            className="text-xs px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-          >
-            GitHub
-          </Link>
-          <Link
-            href="https://twitter.com/AmayDixit11"
-            className="text-xs px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-          >
-            Twitter
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 // Newsletter Widget
 export const NewsletterWidget: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-primary/5 to-purple-500/5 border border-primary/20 rounded-lg p-6">
       <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 flex items-center gap-2">
         <Rss size={18} />
-        Stay Updated
+        Stay in the loop
       </h3>
       <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-        Get notified when I publish new articles about web development and
-        system design.
+        Follow me on X or drop me an email to hear about new posts.
       </p>
       <div className="space-y-3">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-        />
-        <button className="w-full px-4 py-2 bg-primary text-white text-sm rounded-lg hover:bg-blue-700 transition-colors">
-          Subscribe
-        </button>
-      </div>
-    </div>
-  );
-};
-
-// Reading Progress Widget
-export const ReadingProgressWidget: React.FC = () => {
-  const [progress, setProgress] = React.useState(0);
-
-  React.useEffect(() => {
-    const updateProgress = () => {
-      const scrolled = window.scrollY;
-      const maxHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrolled / maxHeight) * 100;
-      setProgress(Math.min(progress, 100));
-    };
-
-    window.addEventListener("scroll", updateProgress);
-    return () => window.removeEventListener("scroll", updateProgress);
-  }, []);
-
-  return (
-    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-      <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-        <Eye size={18} />
-        Reading Progress
-      </h3>
-      <div className="space-y-3">
-        <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-          <span>Progress</span>
-          <span>{Math.round(progress)}%</span>
-        </div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-          <div
-            className="bg-gradient-to-r from-primary to-purple-600 h-2 rounded-full transition-all duration-300 ease-out"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
-        <p className="text-xs text-gray-500 dark:text-gray-500">
-          {progress < 100 ? "Keep reading!" : "Article completed! 🎉"}
-        </p>
-      </div>
-    </div>
-  );
-};
-
-// Popular Posts Widget
-export const PopularPostsWidget: React.FC = () => {
-  const popularPosts = [
-    {
-      title: "Building a REST API with Node.js",
-      slug: "building-rest-api-nodejs",
-      views: "2.3k",
-      readingTime: "10 min read",
-    },
-    {
-      title: "Docker Best Practices for Production",
-      slug: "docker-production-best-practices",
-      views: "1.8k",
-      readingTime: "8 min read",
-    },
-    {
-      title: "Understanding Database Indexing",
-      slug: "database-indexing-guide",
-      views: "1.5k",
-      readingTime: "12 min read",
-    },
-    {
-      title: "System Design Fundamentals",
-      slug: "system-design-fundamentals",
-      views: "1.2k",
-      readingTime: "15 min read",
-    },
-  ];
-
-  return (
-    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-      <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-        <TrendingUp size={18} />
-        Popular Posts
-      </h3>
-      <div className="space-y-4">
-        {popularPosts.map((post, index) => (
-          <Link key={index} href={`/blog/${post.slug}`} className="block group">
-            <div className="pb-3 border-b border-gray-100 dark:border-gray-800 last:border-b-0">
-              <div className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-6 h-6 bg-primary/10 text-primary text-xs font-bold rounded-full flex items-center justify-center">
-                  {index + 1}
-                </span>
-                <div className="flex-1">
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100 text-sm group-hover:text-primary transition-colors mb-1 line-clamp-2">
-                    {post.title}
-                  </h4>
-                  <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-500">
-                    <span className="flex items-center gap-1">
-                      <Eye size={10} />
-                      {post.views}
-                    </span>
-                    <span>•</span>
-                    <span>{post.readingTime}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Link>
-        ))}
+        <a
+          href="https://x.com/AmayDixit11"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full px-4 py-2 bg-primary text-white text-sm text-center rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          Follow on X
+        </a>
+        <a
+          href="mailto:amaydixit11@gmail.com"
+          className="block w-full px-4 py-2 text-sm text-center border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+        >
+          Email me
+        </a>
       </div>
     </div>
   );
@@ -667,14 +441,10 @@ export const PopularPostsWidget: React.FC = () => {
 // Tech Stack Widget
 export const TechStackWidget: React.FC = () => {
   const techStack = [
+    { name: "Next.js 15", category: "Framework", color: "bg-gray-800" },
     { name: "TypeScript", category: "Language", color: "bg-blue-500" },
-    { name: "React", category: "Frontend", color: "bg-cyan-500" },
-    { name: "Next.js", category: "Framework", color: "bg-gray-800" },
-    { name: "Node.js", category: "Backend", color: "bg-green-500" },
-    { name: "Python", category: "Language", color: "bg-yellow-500" },
-    { name: "PostgreSQL", category: "Database", color: "bg-indigo-500" },
-    { name: "Docker", category: "DevOps", color: "bg-blue-600" },
-    { name: "AWS", category: "Cloud", color: "bg-orange-500" },
+    { name: "MDX", category: "Content", color: "bg-yellow-500" },
+    { name: "Tailwind CSS", category: "Styling", color: "bg-cyan-500" },
   ];
 
   return (
@@ -685,7 +455,7 @@ export const TechStackWidget: React.FC = () => {
       </h3>
       <div className="space-y-3">
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          Technologies I frequently write about and work with:
+          What this blog is built with:
         </p>
         <div className="flex flex-wrap gap-2">
           {techStack.map((tech, index) => (
@@ -812,51 +582,6 @@ export const QuickActionsWidget: React.FC<{ title: string; slug: string }> = ({
           </p>
         </div>
       )}
-    </div>
-  );
-};
-// Categories Widget
-export const CategoriesWidget: React.FC = () => {
-  const categories = [
-    { name: "Web Development", count: 12, slug: "web-development" },
-    { name: "System Design", count: 8, slug: "system-design" },
-    { name: "Backend Engineering", count: 10, slug: "backend" },
-    { name: "DevOps", count: 6, slug: "devops" },
-    { name: "Database", count: 5, slug: "database" },
-    { name: "API Design", count: 7, slug: "api-design" },
-    { name: "Performance", count: 4, slug: "performance" },
-  ];
-
-  return (
-    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-      <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-        <Tag size={18} />
-        Categories
-      </h3>
-      <div className="space-y-2">
-        {categories.map((category, index) => (
-          <Link
-            key={index}
-            href={`/blog/category/${category.slug}`}
-            className="flex items-center justify-between p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group"
-          >
-            <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-primary">
-              {category.name}
-            </span>
-            <span className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 px-2 py-1 rounded-full">
-              {category.count}
-            </span>
-          </Link>
-        ))}
-      </div>
-      <div className="pt-3 border-t border-gray-200 dark:border-gray-700 mt-4">
-        <Link
-          href="/blog"
-          className="text-sm text-primary hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1"
-        >
-          View all posts <ArrowLeft size={12} className="rotate-180" />
-        </Link>
-      </div>
     </div>
   );
 };

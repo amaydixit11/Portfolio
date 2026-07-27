@@ -2,13 +2,10 @@ import React from 'react';
 import {
   Code2,
   GitBranch,
-  MessageSquare,
-  Trophy,
   TrendingUp,
-  Star,
-  Activity,
   BookOpen,
 } from 'lucide-react';
+import { getAllPosts } from '@/lib/blog';
 
 interface StatCardProps {
   icon: React.ReactNode;
@@ -43,60 +40,34 @@ const StatCard: React.FC<StatCardProps> = ({ icon, label, value, subtitle, color
 );
 
 export const StatsDashboard: React.FC = () => {
+  const postCount = getAllPosts().length;
+
   const stats = [
     {
+      icon: <GitBranch size={24} />,
+      label: 'Internship Selections',
+      value: '5',
+      subtitle: 'LFX · MOSIP ×3 · FOSSEE',
+      color: 'text-purple-600',
+    },
+    {
       icon: <Code2 size={24} />,
-      label: 'LeetCode & Codeforces Problems Solved',
-      value: '557',
-      subtitle: '66E · 130M · 13H',
+      label: 'Codeforces Rating',
+      value: '1432',
+      subtitle: 'Specialist',
       color: 'text-green-600',
     },
     {
-      icon: <GitBranch size={24} />,
-      label: 'Completed Internships',
-      value: '6',
-      subtitle: 'Active',
-      color: 'text-purple-600',
-    },
-    // {
-    //   icon: <MessageSquare size={24} />,
-    //   label: 'ChatGPT Conversations',
-    //   value: '5,180',
-    //   subtitle: 'Since Dec 2022',
-    //   color: 'text-blue-600',
-    // },
-    // {
-    //   icon: <Trophy size={24} />,
-    //   label: 'Contributions (2024)',
-    //   value: '1,200+',
-    //   subtitle: 'Growing',
-    //   color: 'text-orange-600',
-    // },
-    // {
-    //   icon: <Star size={24} />,
-    //   label: 'Programming Languages',
-    //   value: '9',
-    //   subtitle: 'Proficient',
-    //   color: 'text-yellow-600',
-    // },
-    // {
-    //   icon: <Activity size={24} />,
-    //   label: 'Open Source Projects',
-    //   value: '11',
-    //   subtitle: 'Shipped',
-    //   color: 'text-pink-600',
-    // },
-    {
       icon: <BookOpen size={24} />,
       label: 'Blog Posts Published',
-      value: '4',
+      value: String(postCount),
       subtitle: 'More coming',
       color: 'text-indigo-600',
     },
     {
       icon: <TrendingUp size={24} />,
       label: 'CGPA',
-      value: '9.16',
+      value: '9.18',
       subtitle: 'IIT Bhilai',
       color: 'text-teal-600',
     },
@@ -111,7 +82,7 @@ export const StatsDashboard: React.FC = () => {
             Stats & Impact
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mt-2">
-            A snapshot of my learning journey and technical contributions
+            A snapshot of where things stand right now
           </p>
         </div>
 
