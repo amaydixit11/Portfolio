@@ -215,7 +215,7 @@ export const projectsData: ProjectsData = {
   stats: {
     totalProjects: 10,
     publicRepos: 95,
-    contributions: 1200,
+    contributions: 4724,
     languages: 9,
   },
 };

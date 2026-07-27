@@ -38,7 +38,7 @@ export const achievementsData = [
   "Coordinator @ OpenLake (1 year)",
   "Winner, Trustathon — de.ci.phe.red lab",
   "Speaker @ DPG Dialogues '25",
-  "Codeforces Specialist (1432)",
+  "Codeforces Specialist (1433)",
 ];
 
 export const learningData = [

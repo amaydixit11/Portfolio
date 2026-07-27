@@ -3,9 +3,7 @@ import {
   Code2,
   GitBranch,
   TrendingUp,
-  BookOpen,
 } from 'lucide-react';
-import { getAllPosts } from '@/lib/blog';
 
 interface StatCardProps {
   icon: React.ReactNode;
@@ -40,8 +38,6 @@ const StatCard: React.FC<StatCardProps> = ({ icon, label, value, subtitle, color
 );
 
 export const StatsDashboard: React.FC = () => {
-  const postCount = getAllPosts().length;
-
   const stats = [
     {
       icon: <GitBranch size={24} />,
@@ -51,17 +47,17 @@ export const StatsDashboard: React.FC = () => {
       color: 'text-purple-600',
     },
     {
-      icon: <Code2 size={24} />,
-      label: 'Codeforces Rating',
-      value: '1432',
-      subtitle: 'Specialist',
+      icon: <GitBranch size={24} />,
+      label: 'GitHub Contributions',
+      value: '4,724',
+      subtitle: 'Last 12 months',
       color: 'text-green-600',
     },
     {
-      icon: <BookOpen size={24} />,
-      label: 'Blog Posts Published',
-      value: String(postCount),
-      subtitle: 'More coming',
+      icon: <Code2 size={24} />,
+      label: 'Problems Solved',
+      value: '550',
+      subtitle: '341 CF · 209 LC',
       color: 'text-indigo-600',
     },
     {

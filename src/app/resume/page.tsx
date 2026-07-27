@@ -127,7 +127,7 @@ const AchievementsWidget: React.FC = () => {
     },
     {
       title: "Codeforces Specialist",
-      description: "Peak rating 1432 in competitive programming",
+      description: "Peak rating 1433 in competitive programming",
       year: "2025",
     },
   ];
