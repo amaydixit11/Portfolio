@@ -115,8 +115,8 @@ export const projectsData: ProjectsData = {
       longDescription:
         "Research project on how machine learning can dynamically optimize database index selection based on query patterns and data characteristics. Uses meta-learning to predict optimal index configurations for given workloads, adapting to changing query distributions. Evaluated on standard database benchmarks against traditional cost-based optimizer approaches.",
       tags: ["Python", "Machine Learning", "Database Systems", "Meta-Learning", "Research"],
-      github: "https://github.com/amaydixit11/DSL501_ML_Project",
-      demo: "https://github.com/amaydixit11/DSL501_ML_Project",
+      github: "https://github.com/amaydixit11/MetaIndex",
+      demo: "https://github.com/amaydixit11/MetaIndex",
       status: "Research",
       type: "Research",
       startDate: "2025",
