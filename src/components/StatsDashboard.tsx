@@ -54,7 +54,7 @@ export const StatsDashboard: React.FC = () => {
     {
       icon: <GitBranch size={24} />,
       label: 'Completed Internships',
-      value: '6',
+      value: '8',
       subtitle: 'Active',
       color: 'text-purple-600',
     },

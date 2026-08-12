@@ -26,11 +26,11 @@ const Hero = () => {
         </h2>
 
         <p className="text-gray-600 dark:text-gray-300">
-          Pre-final year DSAI @ IIT Bhilai · CGPA 9.16 · Building from-scratch systems in Go, Rust, and Python
+          Pre-final year DSAI @ IIT Bhilai · CGPA 9.16 · Building from-scratch systems in Go, Python, and C++
         </p>
 
         <p className="text-gray-700 dark:text-gray-300">
-          Skilled in Go, Python, Rust, C/C++, TypeScript, Next.js, PostgreSQL, libp2p, and CRDTs.
+          Skilled in Go, Python, C/C++, TypeScript, Next.js, PostgreSQL, libp2p, and CRDTs.
           Built a BitTorrent client from scratch, CRDT-based sync engines (ACORDE),
           and LLM-powered analysis tools. Selected as a Mentee in {" "}
           <span className="font-semibold text-primary">LFX Mentorship Program</span>{" "}

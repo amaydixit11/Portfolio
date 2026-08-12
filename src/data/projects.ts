@@ -157,8 +157,6 @@ export const projectsData: ProjectsData = {
       longDescription:
         "RAG system enabling intelligent document processing and querying. Combines vector embeddings, semantic search, and LLM generation to answer questions from personal document collections. Features document chunking strategies, embedding optimization, context window management, and retrieval pipeline tuning for grounded responses.",
       tags: ["Python", "RAG", "LLM", "Vector DB", "Embeddings"],
-      github: "https://github.com/amaydixit11/RAGfolio",
-      demo: "https://github.com/amaydixit11/RAGfolio",
       status: "Active",
       type: "Research",
       startDate: "2025",
@@ -199,8 +197,8 @@ export const projectsData: ProjectsData = {
       longDescription:
         "Complete B+ Tree implementation covering all fundamental database index operations: insertion with node splitting, deletion with sibling borrowing and merging, point queries, and range scans. Proper balancing, leaf-level linked lists for efficient range queries, and configurable order parameter. Comprehensive test coverage and performance benchmarks.",
       tags: ["Go", "Data Structures", "Databases", "Algorithms"],
-      github: "https://github.com/amaydixit11/bplus-tree",
-      demo: "https://github.com/amaydixit11/bplus-tree",
+      github: "https://github.com/amaydixit11/B-Tree",
+      demo: "https://github.com/amaydixit11/B-Tree",
       status: "Complete",
       type: "Systems",
       startDate: "2025",

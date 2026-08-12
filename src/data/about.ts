@@ -32,7 +32,7 @@ export const skillsData = [
   {
     title: "Systems Programming",
     description:
-      "Go, Rust, C/C++ — building protocols (BitTorrent), distributed systems (ACORDE with libp2p/CRDTs), and data structures (B+ Trees) from scratch.",
+      "Go, C/C++ — building protocols (BitTorrent), distributed systems (ACORDE with libp2p/CRDTs), and data structures (B+ Trees) from scratch.",
   },
   {
     title: "Backend Development",

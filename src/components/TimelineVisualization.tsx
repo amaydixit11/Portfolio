@@ -153,7 +153,7 @@ export const TimelineVisualization: React.FC = () => {
             <div className="text-sm text-gray-600 dark:text-gray-400">CGPA</div>
           </div>
           <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 border border-purple-200 dark:border-purple-800 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-purple-600 mb-1">2</div>
+            <div className="text-3xl font-bold text-purple-600 mb-1">8</div>
             <div className="text-sm text-gray-600 dark:text-gray-400">Internships</div>
           </div>
           <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 border border-green-200 dark:border-green-800 rounded-xl p-6 text-center">
