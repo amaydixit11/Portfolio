@@ -27,7 +27,7 @@ const skillsData: SkillCategory[] = [
       { name: 'Go', level: 90 },
       { name: 'Python', level: 85 },
       { name: 'C/C++', level: 85 },
-      { name: 'Rust', level: 70 },
+      { name: 'Java', level: 70 },
       { name: 'TypeScript', level: 80 },
       { name: 'JavaScript', level: 85 },
     ],

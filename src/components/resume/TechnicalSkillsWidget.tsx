@@ -8,7 +8,7 @@ const TechnicalSkillsWidget: React.FC = () => {
       skills: [
         "Go",
         "Python",
-        "Rust",
+        "Java",
         "TypeScript",
         "C/C++",
         "JavaScript",

@@ -15,16 +15,40 @@ interface TimelineItem {
 
 const experienceData: TimelineItem[] = [
   {
+    organization: "Emergent (Y Combinator), Bengaluru",
+    roles: [
+      {
+        title: "Software Engineer Intern, Polaris Fellowship 2026",
+        period: "July, 2026 - Present",
+        description:
+          "Selected as one of 10 Polaris Fellows for a six-month placement at Emergent. Working on agent infrastructure: replay and evaluation tooling for agent runs, a counterfactual eval bench built on Temporal durable workflows, and browser-testing tools for the agent runtime (Playwright script persistence, viewport control).",
+      },
+    ],
+    logoUrl: "https://avatars.githubusercontent.com/u/166192107?v=4",
+  },
+  {
     organization: "OpenSSF via Linux Foundation",
     roles: [
       {
         title: "LFX Mentee",
         period: "June, 2026 - August, 2026",
         description:
-          "Selected for the Linux Foundation's LFX Mentorship Program through OpenSSF. Contributing to Repository Service for TUF (RSTUF), working on secure software supply-chain infrastructure, repository management, artifact signing workflows, and improvements to The Update Framework (TUF) ecosystem.",
+          "Selected for the Linux Foundation's LFX Mentorship Program through OpenSSF, on Repository Service for TUF (RSTUF). Built role-specific online keys for custom TUF delegations and their nested hash bins, across the RSTUF worker, API, CLI and umbrella repos: +5,591 / -1,172 lines and 93 new unit tests, currently in upstream review.",
       },
     ],
     logoUrl: "https://www.pngkey.com/png/detail/237-2373304_linux-foundation-logo.png",
+  },
+  {
+    organization: "HSBC Technology India, Pune",
+    roles: [
+      {
+        title: "Intern",
+        period: "June, 2026 - July, 2026",
+        description:
+          "Summer internship at HSBC Technology India in Pune.",
+      },
+    ],
+    logoUrl: "https://avatars.githubusercontent.com/u/48318517?v=4",
   },
   {
     organization: "MOSIP via C4GT",
@@ -33,17 +57,17 @@ const experienceData: TimelineItem[] = [
         title: "Project Intern",
         period: "October, 2025 - February, 2026",
         description:
-          "Implemented OpenID4VCI Pre-Authorized Code Flow in MOSIP Inji Certify, enabling seamless issuance of Verifiable Credentials without real-time authentication. Developed credential offer generation, pre-authorized code validation, token exchange workflows, multiple authorization server support, metadata discovery, caching, and OID4VCI-compliant credential issuance APIs.",
+          "Implemented OpenID4VCI Pre-Authorized Code Flow in MOSIP Inji Certify, enabling seamless issuance of Verifiable Credentials without real-time authentication. Developed credential offer generation, pre-authorized code validation, token exchange workflows, multiple authorization server support, metadata discovery, caching, and OID4VCI-compliant credential issuance APIs. Across all three cohorts: 11 merged PRs into inji-certify, +9,963 / -1,185 lines.",
       },
       {
         title: "Summer Intern, C4GT DMP'25",
-        period: "June, 2025 - September, 2025",
+        period: "June, 2025 - October, 2025",
         description:
           "Worked on MOSIP Inji Stack, enabling Inji Certify to issue Verifiable Credentials (VCs) in the mDoc (ISO/IEC 18013-5) format. Implemented data element and namespace mapping, digest calculation, Mobile Security Object (MSO) construction, CBOR encoding, and OpenID4VCI integration for standards-compliant credential issuance.",
       },
       {
         title: "Project Intern, C4GT Sprint'25",
-        period: "March, 2025 - May, 2025",
+        period: "February, 2025 - May, 2025",
         description:
           "Implemented a Revocation Mechanism for Verifiable Credentials compliant with W3C Verifiable Credentials Data Model 2.0 and BitString StatusList v1.0. Developed APIs for credential status updates, cryptographic proofs, and decentralized revocation workflows.",
       },

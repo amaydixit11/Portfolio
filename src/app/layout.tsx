@@ -10,13 +10,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Amay Dixit - Open Source Developer | Student",
-  description: "Amay Dixit is an Open Source Developer studying Computer Science at IIT Bhilai. Specializing in system design, scalable applications, and contributing to MOSIP and FOSSEE projects. Experienced in Go, TypeScript, React, Node.js, and database systems.",
+  description: "Amay Dixit is an Open Source Developer studying Data Science & AI at IIT Bhilai. Specializing in system design, scalable applications, and contributing to MOSIP and FOSSEE projects. Experienced in Go, TypeScript, React, Node.js, and database systems.",
   keywords: [
     "Amay Dixit",
     "Backend Engineer", 
     "Open Source Developer",
     "IIT Bhilai",
-    "Computer Science",
+    "Data Science",
     "System Design",
     "Node.js Developer",
     "React Developer",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://amaydixit11.vercel.app",
     title: "Amay Dixit - Backend Engineer & Open Source Developer",
-    description: "Backend Engineer specializing in system design and scalable applications. Open Source contributor to MOSIP and FOSSEE. Computer Science student at IIT Bhilai.",
+    description: "Backend Engineer specializing in system design and scalable applications. Open Source contributor to MOSIP and FOSSEE. Data Science & AI student at IIT Bhilai.",
     siteName: "Amay Dixit Portfolio",
     images: [
       {

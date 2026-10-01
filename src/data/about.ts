@@ -4,15 +4,15 @@ import { CurrentActivity, Track } from "../types/about";
 export const personalInfo = {
   location: "Bhilai, India",
   description:
-    "Building backend systems, distributed databases, and AI-powered tools. Pre-final year DSAI at IIT Bhilai with 9.16 CGPA. Led OpenLake (open-source society at IIT Bhilai) as Coordinator. Three competitive internship selections: LFX in RSTUF (Supply Chain Security), thrice at MOSIP (digital identity) and OSDAG @ FOSSEE/IIT Bombay.",
+    "Building backend systems, distributed databases, and AI-powered tools. Final-year DSAI at IIT Bhilai with 9.16 CGPA. Software Engineer Intern at Emergent as a Polaris Fellow. Led OpenLake (open-source society at IIT Bhilai) as Coordinator. Selected for LFX at RSTUF (supply-chain security), three MOSIP cohorts (digital identity), and OSDAG @ FOSSEE/IIT Bombay; interned at HSBC Technology India.",
 };
 
 export const bioData = {
   paragraphs: [
-    "I'm a pre-final year student in Data Science and AI at IIT Bhilai with a CGPA of 9.16. I focus on backend systems, distributed systems, and building tools that solve real problems. My work spans from implementing network protocols from scratch to building microservices platforms and LLM-powered analysis tools.",
+    "I'm a final-year student in Data Science and AI at IIT Bhilai with a CGPA of 9.16, currently spending my seventh semester in Bengaluru as a Polaris Fellow at Emergent, working on agent infrastructure: replay and evaluation tooling for agent runs and browser-testing tools for the agent runtime. I focus on backend systems, distributed systems, and building tools that solve real problems. My work spans from implementing network protocols from scratch to building microservices platforms and LLM-powered analysis tools.",
     "As Coordinator of OpenLake — the open-source society at IIT Bhilai — I led the organization for a year, setting technical roadmaps for active projects, organizing workshops and hackathons, and mentoring juniors into productive contributors.",
-    "I've completed multiple competitive open-source internship selections: a double selection at MOSIP through C4GT (Sprint and DMP cohorts) where I worked on digital identity infrastructure implementing ISO/IEC 18013-5 mDoc format and W3C Verifiable Credentials; a FOSSEE Summer Fellowship at IIT Bombay working on OSDAG; and a selection into the Linux Foundation's LFX Mentorship Program through OpenSSF, where I'm contributing to the Repository Service for TUF (RSTUF) by enhancing secure software supply-chain infrastructure and artifact signing workflows.",
-    "My current work includes Kudos (a token-economy social platform), ACORDE (a CRDT-based distributed data sync engine with libp2p), a from-scratch BitTorrent client in Go, and various AI/ML projects including GitIntel and RAGfolio.",
+    "I've completed multiple competitive open-source selections: three consecutive MOSIP cohorts through C4GT (Sprint, DMP and Project), with 11 merged PRs into Inji Certify covering W3C BitString Status List revocation, ISO/IEC 18013-5 mDoc issuance, and the OpenID4VCI Pre-Authorized Code flow; a FOSSEE Summer Fellowship at IIT Bombay working on OSDAG; and the Linux Foundation's LFX Mentorship Program through OpenSSF, where I built role-specific online keys for custom TUF delegations across the Repository Service for TUF (RSTUF) worker, API and CLI. Before Emergent I spent the summer of 2026 as an intern at HSBC Technology India in Pune.",
+    "My own projects include ACORDE (a CRDT-based distributed data sync engine with libp2p), Agent-Control-Plane (a durable execution coordinator for fleets of AI agents), HalfLife (temporal reranking for RAG, on PyPI as halflife-rag), a from-scratch BitTorrent client in Go, and a disk-backed B+ tree in C++.",
     "When I'm not coding, I'm probably analyzing data, gaming (Minecraft, Pokemon), or organizing my knowledge in Obsidian.",
   ],
 };
@@ -24,7 +24,7 @@ export const journeyData = {
     "Third semester, I learned Go and built AcadMap for our campus. Joining OpenLake opened my eyes to open-source culture. I studied Deep Learning, learned Docker, and started thinking about systems at scale.",
     "Fourth semester brought my first MOSIP selection through C4GT — enterprise development, Spring Boot, and production-grade systems. I was also named Coordinator of OpenLake and started building my BitTorrent client from scratch.",
     "Summer after second year, I interned at FOSSEE (IIT Bombay) while doing my second MOSIP selection. Built the BitTorrent client to completion, started reading about distributed systems, and wrote CI/CD templates for the organization.",
-    "Now in my pre-final year at 9.16 CGPA, I'm focused on distributed systems and database internals. Kudos, ACORDE, GitIntel, B+ Tree, and RAG systems represent where I'm pushing myself, along with preparing for industry roles.",
+    "Third year brought my third MOSIP cohort, ACORDE, HalfLife and Agent-Control-Plane. In summer 2026 I interned at HSBC in Pune, did the LFX mentorship at RSTUF in the evenings, and was selected as one of 10 Polaris Fellows. Now in my final year at 9.16 CGPA, I'm at Emergent in Bengaluru working on agent infrastructure.",
   ],
 };
 
@@ -68,9 +68,9 @@ export const beyondCodeData = {
 
 export const getMockCurrentActivity = (): CurrentActivity => ({
   status: "building",
-  project: "Kudos",
-  link: "https://github.com/amaydixit11/Kudos",
-  language: "Go + Next.js",
+  project: "agent infra @ Emergent",
+  link: "https://emergent.sh",
+  language: "Go + TypeScript + Python",
 });
 
 export const getMockCurrentTrack = (): Track => ({
@@ -83,7 +83,9 @@ export const getMockCurrentTrack = (): Track => ({
 export const achievementsData = [
   "CGPA 9.16 @ IIT Bhilai (Data Science & AI)",
   "Coordinator @ OpenLake (1 year)",
-  "Double Selection: MOSIP C4GT (Sprint + DMP)",
+  "Polaris Fellow 2026 (1 of 10) @ Emergent",
+  "LFX Mentee @ RSTUF, OpenSSF",
+  "Three MOSIP C4GT cohorts, 11 merged PRs",
   "FOSSEE Summer Fellow @ IIT Bombay",
   "BitTorrent Client from scratch in Go",
   "ISO/IEC 18013-5 mDoc implementation at MOSIP",

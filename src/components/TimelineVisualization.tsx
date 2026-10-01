@@ -2,7 +2,6 @@
 
 import React from 'react';
 import {
-  GraduationCap,
   Briefcase,
   Trophy,
   Code,
@@ -20,31 +19,31 @@ interface TimelineEvent {
 
 const timelineData: TimelineEvent[] = [
   {
-    date: 'Jul 2025 - Present',
-    title: 'Pre-Final Year @ IIT Bhilai',
+    date: 'Jul 2026 - Present',
+    title: 'Polaris Fellow @ Emergent',
     description:
-      'CGPA 9.16 in Data Science & AI. Focused on distributed systems, database internals, and production ML pipelines. Building ACORDE, Kudos, and various AI-powered tools.',
-    icon: <GraduationCap size={20} />,
+      'One of 10 Polaris Fellows, placed at Emergent (Y Combinator) in Bengaluru for six months as a Software Engineer Intern. Working on agent infrastructure: replay and evaluation tooling, a counterfactual eval bench on Temporal, and browser-testing tools for the agent runtime. Final year at IIT Bhilai, CGPA 9.16.',
+    icon: <Briefcase size={20} />,
     color: 'from-blue-500 to-blue-600',
   },
   {
     date: 'Jun 2026 - Aug 2026',
-    title: 'OpenSSF LFX Mentee',
+    title: 'OpenSSF LFX Mentee + HSBC Intern',
     description:
-      'Selected for the Linux Foundation LFX Mentorship Program through OpenSSF. Contributed to Repository Service for TUF (RSTUF), working on secure software supply-chain infrastructure, artifact signing workflows, and repository management tooling.',
+      'LFX Mentorship through OpenSSF on Repository Service for TUF (RSTUF): role-specific online keys for custom TUF delegations across the worker, API and CLI, now in upstream review. In parallel, a summer internship at HSBC Technology India, Pune.',
     icon: <Trophy size={20} />,
     color: 'from-yellow-500 to-amber-600',
   },
   {
-    date: '2025',
+    date: '2025 - 2026',
     title: 'Major Project Year',
     description:
-      'Built a BitTorrent Client from scratch in Go. Started Kudos (token-economy social platform) and ACORDE (CRDT-based distributed sync engine). Created GitIntel, RAGfolio, a B+ Tree implementation, and other systems-focused projects.',
+      'Built a BitTorrent Client from scratch in Go. Started Kudos (token-economy social platform) and ACORDE (CRDT-based distributed sync engine). Created GitIntel, a disk-backed B+ Tree in C++, HalfLife (temporal RAG reranker, published on PyPI), and Agent-Control-Plane.',
     icon: <Code size={20} />,
     color: 'from-purple-500 to-purple-600',
   },
   {
-    date: '2024-2025',
+    date: '2025-2026',
     title: 'OpenLake Coordinator',
     description:
       'Led OpenLake (IIT Bhilai\'s open-source society) for 1 year. Set technical roadmaps, organized workshops and hackathons, mentored juniors into productive contributors. Led Leaderboard-Pro project.',
@@ -52,10 +51,10 @@ const timelineData: TimelineEvent[] = [
     color: 'from-green-500 to-green-600',
   },
   {
-    date: '2024',
+    date: '2025-2026',
     title: 'MOSIP & FOSSEE Internships',
     description:
-      'Selected for both MOSIP (C4GT Sprint + DMP cohorts) and the FOSSEE Summer Fellowship at IIT Bombay. Worked on digital identity infrastructure implementing ISO/IEC 18013-5 mDoc format, W3C Verifiable Credentials, and structural engineering software development through OSDAG.',
+      'Three consecutive MOSIP cohorts through C4GT (Sprint, DMP, Project), Feb 2025 to Feb 2026, plus the FOSSEE Summer Fellowship at IIT Bombay. 11 merged PRs into Inji Certify: W3C BitString Status List revocation, ISO/IEC 18013-5 mDoc issuance, and the OpenID4VCI Pre-Authorized Code flow. Structural engineering software through OSDAG.',
     icon: <Trophy size={20} />,
     color: 'from-orange-500 to-orange-600',
   },

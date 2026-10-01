@@ -91,8 +91,18 @@ const EducationWidget: React.FC = () => {
 const AchievementsWidget: React.FC = () => {
   const achievements = [
     {
+      title: "Polaris Fellow",
+      description: "One of 10 fellows, six-month placement at Emergent",
+      year: "2026",
+    },
+    {
+      title: "LFX Mentee, OpenSSF",
+      description: "Linux Foundation mentorship on Repository Service for TUF",
+      year: "2026",
+    },
+    {
       title: "MOSIP C4GT Intern",
-      description: "Selected for prestigious Code for GovTech internship",
+      description: "Selected for three consecutive Code for GovTech cohorts",
       year: "2025",
     },
     {
@@ -106,7 +116,7 @@ const AchievementsWidget: React.FC = () => {
       year: "2025",
     },
     {
-      title: "Codeforces Specialist",
+      title: "Codeforces",
       description: "Rating: 1320+ in competitive programming",
       year: "2024",
     },
@@ -148,10 +158,22 @@ const OpenSourceWidget: React.FC = () => {
 
   const contributions = [
     {
-      project: "MOSIP Inji Stack",
-      role: "Core Contributor",
-      description: "mDoc format support & VC revocation mechanism",
-      tech: ["NestJS", "W3C Standards", "Cryptography"],
+      project: "MOSIP Inji Certify",
+      role: "Contributor, C4GT",
+      description: "11 merged PRs, +9,963 / -1,185: VC revocation, mDoc issuance, OpenID4VCI pre-auth flow",
+      tech: ["Java", "Spring Boot", "W3C VC", "CBOR/COSE"],
+    },
+    {
+      project: "RSTUF (LFX / OpenSSF)",
+      role: "Mentee",
+      description: "Role-specific online keys for TUF delegations across worker, API and CLI, in review",
+      tech: ["Python", "TUF", "Supply-chain Security"],
+    },
+    {
+      project: "GoFr, Nirmata, sktime/skpro",
+      role: "Contributor",
+      description: "Supabase driver for GoFr, 7 merged PRs at Nirmata, KernelMixture distribution in skpro",
+      tech: ["Go", "Kubernetes", "Python"],
     },
     {
       project: "OpenLake Projects",
@@ -162,7 +184,7 @@ const OpenSourceWidget: React.FC = () => {
     {
       project: "Personal Projects",
       role: "Creator",
-      description: `25+ public repositories with ${contributionCount}+ contributions`,
+      description: `${projectsData.stats.publicRepos} public repositories with ${contributionCount}+ contributions`,
       tech: ["Various Tech Stacks"],
     },
   ];
@@ -204,10 +226,10 @@ const OpenSourceWidget: React.FC = () => {
         ))}
         <div className="pt-2">
           <Link
-            href="https://github.com/amaydixit11"
+            href="https://github.com/amaydixit11/amaydixit11/blob/main/CONTRIBUTIONS.md"
             className="text-xs text-blue-500 hover:text-blue-700 flex items-center gap-1"
           >
-            View GitHub Profile <ExternalLink size={10} />
+            Every merged PR, linked <ExternalLink size={10} />
           </Link>
         </div>
       </div>
@@ -216,7 +238,7 @@ const OpenSourceWidget: React.FC = () => {
 };
 
 const Resume: React.FC = () => {
-  const allowedIndexes = [0, 1, 4, 5]; // Indexes of projects to show on resume
+  const resumeProjects = ["Kudos", "ACORDE", "AcadMap", "MetaIndex"]; // Projects to show on resume
   return (
     <div className="py-8 min-h-screen mt-20">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -262,13 +284,13 @@ const Resume: React.FC = () => {
               Professional Summary
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              Passionate backend engineer and system designer with hands-on
-              experience in building scalable applications and contributing to
-              open-source projects. Currently pursuing B.Tech at IIT Bhilai
-              while leading technical initiatives as OpenLake Coordinator.
-              Proven track record of delivering impactful solutions through
-              internships at MOSIP and IIT Bombay, with expertise in modern
-              backend technologies and distributed systems.
+              Backend and systems engineer in the final year of a B.Tech at IIT
+              Bhilai, currently a Software Engineer Intern at Emergent as a
+              Polaris Fellow, working on agent infrastructure. 39 merged PRs
+              into external open-source projects, including 11 into MOSIP Inji
+              Certify across three C4GT cohorts. LFX Mentee at RSTUF (OpenSSF),
+              FOSSEE Summer Fellow at IIT Bombay, intern at HSBC Technology
+              India, and former OpenLake Coordinator.
             </p>
           </div>
 
@@ -282,7 +304,7 @@ const Resume: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 gap-4">
               {projectsData["projects"].map((project, index) => {
-                if (index in allowedIndexes)
+                if (resumeProjects.includes(project.name))
                   return (
                     <div
                       key={index}
